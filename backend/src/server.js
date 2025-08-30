@@ -10,6 +10,8 @@ const port = 5001;
 
 connectDB();
 
+app.use(express.json());
+
 //when we write this, we mean that whenever we call 
 //? /api/notes
 // use this 'notesRoutes.js' and go there accordingly 

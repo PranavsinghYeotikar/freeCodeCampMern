@@ -4,7 +4,7 @@
 ```mermaid
 flowchart TD
 
-A[Project] --> B[Backend] -- 1 --> C[server.js] --> D[Create a express app] --> E[app.listen] --> F["app.use('/api', routes);"] -- "after creating db.js" --> P[import connectDB from '.conifg/db.js'] --> Q["write connectDB() in server.js"] -- "after we have written .env and installed dotenv" --> T[import dotenv from 'dotenv'] --> U["dotenv.config();"]
+A[Project] --> B[Backend] -- 1 --> C[server.js] --> D[Create a express app] --> E[app.listen] --> F["app.use('/api', routes);"] -- "after creating db.js" --> P[import connectDB from '.conifg/db.js'] --> Q["write connectDB() in server.js"] --> AA["write app.use(express.json())"] -- "after we have written .env and installed dotenv" --> T[import dotenv from 'dotenv'] --> U["dotenv.config();"]
 
 B[Backend] -- 2 --> G[routes folder] --> routes.js --> H["write all routes there, of get(), post(), put(), delete()"] --> I[import the functions from controller.js]
 
@@ -23,6 +23,23 @@ N[install mongoose and import it] --> O["const connectDB = async () => {
 B[Backend] -- 5 --> .env --> R[put imp things in it] --> S[npm i dotenv] --> T
 
 B[Backend] -- 6 --> V[models folder] --> Model.js --> W[import mongoose] --> X[create SCHEMA] --> Y[model based off of that schema]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %% Default: Big + Bold for everyone
 classDef bigBold font-size:32px,font-weight:bold,stroke:#333,stroke-width:2px;
